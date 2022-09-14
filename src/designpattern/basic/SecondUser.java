@@ -1,9 +1,19 @@
 package designpattern.basic;
 
 public class SecondUser {
-    String name;
+    //we use private access modifier for securing property/field
+
+  private String name;
     public SecondUser(){
 
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName (){
+        return name;
     }
 
     public SecondUser(String nameArgument){

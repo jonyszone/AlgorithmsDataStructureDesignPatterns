@@ -8,7 +8,8 @@ public class MainClass {
         System.out.println(user.name);
         user.greet();*/
 
-        var secondWithConstructor = new SecondUser("Shafi Ul Islam");
-        secondWithConstructor.sayName();
+        var secondWithConstructor = new SecondUser();
+        secondWithConstructor.setName("Shafi Ul Islam");
+        System.out.println( secondWithConstructor.getName());
     }
 }
