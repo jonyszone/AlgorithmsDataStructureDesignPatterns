@@ -26,9 +26,9 @@ public class RadixSort {
             radixSingleSort(input, i, radix);
         }
     }
-        
-        public static void radixSingleSort (int [] input, int position, int radix){
-        
+
+    public static void radixSingleSort (int [] input, int position, int radix){
+
         int numItems = input.length;
         int[] countArray = new int[radix];
 
@@ -39,17 +39,17 @@ public class RadixSort {
         for(int j =1; j< radix; j++){
             countArray [j] += countArray [j - 1];
         }
-        
+
         int [] temp = new int [numItems];
         for (int tempIndex = numItems - 1; tempIndex >= 0; tempIndex--){
             temp[--countArray[getDigit(position, input[tempIndex], radix)]]=
                     input[tempIndex];
         }
-        
+
         for(int tempIndex =0; tempIndex < numItems; tempIndex++){
             input [tempIndex] = temp[tempIndex];
         }
-        
+
     }
 
     public static int getDigit(int position, int value, int radix) {
