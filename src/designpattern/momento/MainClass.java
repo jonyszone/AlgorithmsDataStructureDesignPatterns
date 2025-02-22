@@ -1,4 +1,6 @@
-package designpattern.basic;
+package designpattern.momento;
+
+import designpattern.basic.BankAccount;
 
 public class MainClass {
 
