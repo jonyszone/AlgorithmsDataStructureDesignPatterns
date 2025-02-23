@@ -1,3 +1,21 @@
 # Default ignored files
-/shelf/
-/workspace.xml
+# IntelliJ IDEA specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/shelf/
+.idea/caches/
+*.iml
+
+# Build output directories (Java/Kotlin)
+/target/  # Maven target directory
+/build/   # Gradle build directory
+*.class   # Compiled Java/Kotlin class files
+*.jar     # Java archive files
+*.war     # Web archive files
+
+# Other common files/directories to ignore
+.log     # Log files
+*.swp     # Swap files (e.g., from Vim)
+*.bak     # Backup files
+*.tmp     # Temporary files
