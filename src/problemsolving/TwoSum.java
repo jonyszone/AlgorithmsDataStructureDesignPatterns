@@ -1,5 +1,7 @@
 package problemsolving;
 
+import java.util.Arrays;
+
 class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
@@ -19,5 +21,14 @@ class TwoSum {
         int target = 9;
         int[] result = solution.twoSum(nums, target);
         System.out.println("Indices: [" + result[0] + ", " + result[1] + "]");
+        System.out.println("Average of "+ Arrays.toString(nums) +" is "+average(nums));
+    }
+
+    private static int average(int[] nums) {
+        int result = 0;
+        for (int num : nums) {
+            result += num;
+        }
+        return result;
     }
 }
