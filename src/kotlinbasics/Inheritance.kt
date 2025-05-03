@@ -16,11 +16,6 @@ open class Animal{
         println("Sleeping")
     }
 }
-abstract class People{
-    abstract val name: String
-    abstract val age: String
-    abstract val habitat: String
-}
 
 open class Hippo : Animal() {
     override val image: String
