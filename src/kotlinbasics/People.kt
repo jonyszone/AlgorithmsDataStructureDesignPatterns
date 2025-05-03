@@ -44,9 +44,27 @@ class Jakee(override val image: String, override val food: String, override val 
 
 }
 
-fun main () {
-    val peoples = arrayOf(Shafi(), Jakee("jak.jpg", "Biscuit", "Read"))
-    for (people in peoples) {
-        println(people.food)
+interface Roamable {
+    var velocity: Int
+        get() = 20
+        set(value) { //can not set value to field
+            println("Unable to update velocity") //valid
+            //field = value   ->>>> //it's not valid
+        }
+}
+interface Runable {
+    fun run(){
+        println("Running")
     }
+}
+
+class Abdulllah : Roamable, Runable{
+    override fun run() {
+        super.run()
+    }
+}
+
+fun main () {
+    val abdulllah = Abdulllah()
+    println(abdulllah.run())
 }
