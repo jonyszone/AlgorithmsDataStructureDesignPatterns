@@ -6,14 +6,18 @@ import static algorithmsinjava.SelectionSort.swap;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] numbers = {7, 3, 1, 5, 2};
+        //int[] numbers = {7, 3, 3,  -1, 5, 2};
+        int[] numbers = {-1};
         QuickSort quickSort = new QuickSort();
-        quickSort.sort(numbers, 0, 4);
+        quickSort.sort(numbers);
         System.out.println(Arrays.toString(numbers));
     }
 
+    public void sort(int[]   array){
+        sort(array, 0, array.length-1);
+    }
 
-    public void sort(int[]   array, int start, int end) {
+    private void sort(int[]   array, int start, int end) {
         //stop recursion
         if (start >= end)
             return;
