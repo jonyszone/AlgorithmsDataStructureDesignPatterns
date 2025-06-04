@@ -5,8 +5,10 @@ public class User {
     public String name;
 
     //constructor
-    public User(String name){
+    public User(String name, Another another){
         this.name = name;
+        another = new Another();
+        another.greet();
     }
 
     // Methods
@@ -15,4 +17,10 @@ public class User {
     }
 
 
+}
+
+class Another {
+    public void greet(){
+        System.out.println("Hello Another");
+    }
 }
